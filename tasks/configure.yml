@@ -35,4 +35,4 @@
   service:
     name: go-server
     state: started
-    use: sysv
+    use: sysV
