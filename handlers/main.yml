@@ -5,15 +5,18 @@
   service:
     name: go-server
     state: started
+    use: init
 
 - name: stop go-server
   become: yes
   service:
     name: go-server
     state: stopped
+    use: init
 
 - name: restart go-server
   become: yes
   service:
     name: go-server
     state: restarted
+    use: init
