@@ -5,18 +5,18 @@
   service:
     name: go-server
     state: started
-    use: init
+    use: sysv
 
 - name: stop go-server
   become: yes
   service:
     name: go-server
     state: stopped
-    use: init
+    use: sysv
 
 - name: restart go-server
   become: yes
   service:
     name: go-server
     state: restarted
-    use: init
+    use: sysv
