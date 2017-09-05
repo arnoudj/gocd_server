@@ -28,10 +28,15 @@
     - git
     - tree
 
+- name: add Go CD apt repository key
+  become: yes
+  apt_key:
+    url: "{{ gocd_server.apt_key_url }}"
+
 - name: add GO CD apt repository
   become: yes
   apt_repository:
-    repo: deb http://dl.bintray.com/gocd/gocd-deb/ /
+    repo: "deb {{ gocd_server.repo_url }} /"
     state: present
 
 - name: Install go-server
