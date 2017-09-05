@@ -31,7 +31,7 @@
 - name: add Go CD apt repository key
   become: yes
   apt_key:
-    url: "{{ gocd_server.apt_key_url }}"
+    url: "{{ gocd_server.repo_key_url }}"
 
 - name: add GO CD apt repository
   become: yes
